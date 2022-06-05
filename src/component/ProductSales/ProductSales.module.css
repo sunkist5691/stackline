@@ -17,6 +17,10 @@
 .topic {
   display: flex;
   padding: 5px;
+  cursor: pointer;
+}
+.topic:hover {
+  color: lightsalmon;
 }
 
 .column {

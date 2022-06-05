@@ -1,6 +1,8 @@
 import styles from './ProductDetail.module.css'
+import { useSelector } from 'react-redux'
 
-const ProductDetail = ({ product }) => {
+const ProductDetail = () => {
+  const { product } = useSelector((state) => state.product)
   return (
     <div className={styles.wrapper}>
       <img
