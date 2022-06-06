@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 
 const ProductDetail = () => {
   const { product } = useSelector((state) => state.product)
-  console.log('PRODUCT DETAIL: ', product)
   return (
     <div className={styles.wrapper}>
       <img

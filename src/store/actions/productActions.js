@@ -6,8 +6,7 @@ export const register = () => async (dispatch, getState) => {
     const { data } = await axios.get(
       'https://soft-hotteok-3ed7c0.netlify.app/data.json',
     )
-
-    console.log('BEGINNING: ', data)
+    if (data.length) throw 'wrong data'
     dispatch({
       type: REGISTER_PRODUCT,
       payload: { loading: false, product: { ...data[0] } },
