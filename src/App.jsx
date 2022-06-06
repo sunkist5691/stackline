@@ -8,7 +8,10 @@ import { register } from './store/actions/productActions'
 import { useDispatch, useSelector } from 'react-redux'
 
 function App() {
-  const { loading } = useSelector((state) => state)
+  const {
+    product: { loading },
+  } = useSelector((state) => state)
+
   const dispatch = useDispatch()
 
   useEffect(() => {

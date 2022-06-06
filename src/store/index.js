@@ -3,9 +3,7 @@ import thunk from 'redux-thunk'
 import { productReducer } from './reducers/productReducers'
 
 const initialState = {
-  product: localStorage.getItem('product')
-    ? JSON.parse(localStorage.getItem('product'))
-    : { loading: true, product: {} },
+  product: { loading: true, product: {} },
 }
 
 const reducer = combineReducers({
