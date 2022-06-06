@@ -3,7 +3,9 @@ import { REGISTER_PRODUCT } from '../constant/constant'
 
 export const register = () => async (dispatch, getState) => {
   try {
-    const { data } = await axios.get('./data.json')
+    const { data } = await axios.get(
+      'https://soft-hotteok-3ed7c0.netlify.app/data.json',
+    )
     dispatch({
       type: REGISTER_PRODUCT,
       payload: { loading: false, product: { ...data[0] } },
